@@ -1,205 +1,373 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>nsavage.github.io/</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
-                    </ul>
-                </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nico Savage — Junior Developer</title>
+  <meta name="description" content="Portfolio — Junior Developer with Java, .NET, .NET MAUI, SQL, and web experience.">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (optional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Simple dark theme */
+    :root {
+      --bg: #0f1115;
+      --bg-soft: #151822;
+      --text: #eaeef4;
+      --muted: #9aa3b2;
+      --accent: #6ea8fe; /* Bootstrap primary-ish */
+      --chip: #222638;
+    }
+    html, body { background: var(--bg); color: var(--text); }
+    a { color: var(--accent); }
+    .navbar { background: rgba(21,24,34,0.8) !important; backdrop-filter: saturate(140%) blur(8px); }
+    .hero {
+      background: radial-gradient(1200px 600px at 10% -10%, #1c2233 0%, transparent 60%),
+                  radial-gradient(1300px 700px at 110% -20%, #15203a 0%, transparent 60%);
+      padding: 7rem 0 5rem;
+      border-bottom: 1px solid #1e2432;
+    }
+    .hero h1 { font-weight: 800; letter-spacing: .3px; }
+    .hero .lead { color: var(--muted); }
+    .tag {
+      display: inline-flex; gap: .35rem; align-items: center;
+      padding: .35rem .6rem; border-radius: 999px; background: var(--chip);
+      border: 1px solid #2a2f44; color: #d7dded; font-size: .9rem; margin: .25rem;
+    }
+    .section { padding: 4rem 0; }
+    .card {
+      background: var(--bg-soft); border: 1px solid #1e2432; color: var(--text);
+    }
+    .card .text-muted { color: var(--muted) !important; }
+    .btn-primary { background: var(--accent); border-color: var(--accent); }
+    footer { border-top: 1px solid #1e2432; color: var(--muted); }
+    .muted { color: var(--muted); }
+    .divider { height: 1px; background: #1e2432; margin: 2rem 0; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#top">NS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="hero">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <span class="badge rounded-pill text-bg-dark border border-primary-subtle mb-3">
+          <i class="bi bi-lightning-charge me-1"></i> Junior Developer
+        </span>
+        <h1 class="display-4 mb-3">Hi, I’m <span class="text-primary">Nico Savage</span>.</h1>
+        <p class="lead mb-4">
+          I build practical apps across the stack — <strong>Java/Spring Boot</strong> APIs, 
+          <strong>.NET / .NET MAUI</strong> apps with <strong>C#</strong>, and clean front-ends with 
+          <strong>HTML/CSS/JavaScript</strong> + Bootstrap. I like shipping features and keeping things simple.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-primary btn-lg" href="#projects"><i class="bi bi-kanban me-2"></i>View Projects</a>
+          <a class="btn btn-outline-light btn-lg" href="#resume"><i class="bi bi-file-earmark-text me-2"></i>Resume</a>
+          <a class="btn btn-outline-light btn-lg" href="https://github.com/NSavage13" target="_blank" rel="noopener">
+            <i class="bi bi-github me-2"></i>GitHub
+          </a>
+        </div>
+        <p class="muted mt-3">Pittsburgh area · Open to internships and junior roles</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <h2 class="mb-3">About</h2>
+        <p>
+          I’m studying for a B.S. in Applied Computer Science at Point Park University (expected 2027) and 
+          previously earned an associate degree in Computer Programming at Pittsburgh Technical College (GPA 3.82).
+          I’ve built Java and .NET apps, REST APIs, and basic front-ends. I like clear requirements, 
+          clean Git history, and small, testable changes.
+        </p>
+        <div class="divider"></div>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="card p-3 h-100">
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-code-slash fs-4 me-2 text-primary"></i>
+                <h6 class="m-0">What I do</h6>
+              </div>
+              <ul class="m-0 small">
+                <li>Design REST APIs (Java/Spring Boot)</li>
+                <li>Build .NET apps & cross‑platform UI with .NET MAUI</li>
+                <li>Wire up SQL databases and CRUD flows</li>
+                <li>Write unit tests (JUnit) and use Postman for APIs</li>
+              </ul>
             </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-                <div class="d-flex justify-content-center">
-                    <div class="text-center">
-                        <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
-                        <a class="btn btn-primary" href="#about">Get Started</a>
-                    </div>
-                </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card p-3 h-100">
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-flag fs-4 me-2 text-primary"></i>
+                <h6 class="m-0">Quick facts</h6>
+              </div>
+              <ul class="m-0 small">
+                <li>Junior Developer with full‑stack exposure</li>
+                <li>Comfortable in VS Code & Visual Studio</li>
+                <li>Git/GitHub daily; feature branches & PRs</li>
+                <li>Based near Pittsburgh, PA</li>
+              </ul>
             </div>
-        </header>
-        <!-- About-->
-        <section class="about-section text-center" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="text-white mb-4">Built with Bootstrap 5</h2>
-                        <p class="text-white-50">
-                            Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-                            <a href="https://startbootstrap.com/theme/grayscale/">the preview page.</a>
-                            The theme is open source, and you can use it for any purpose, personal or commercial.
-                        </p>
-                    </div>
-                </div>
-                <img class="img-fluid" src="assets/img/ipad.png" alt="..." />
+          </div>
+        </div>
+      </div>
+      <!-- Contact mini-card -->
+      <div class="col-lg-5">
+        <div class="card p-4">
+          <h6 class="text-uppercase text-primary small mb-3">Reach me</h6>
+          <p class="mb-2"><i class="bi bi-envelope me-2"></i><a href="mailto:savagenico@yahoo.com">savagenico@yahoo.com</a></p>
+          <p class="mb-2"><i class="bi bi-telephone me-2"></i><a href="tel:+17246223676">724‑622‑3676</a></p>
+          <p class="mb-0"><i class="bi bi-github me-2"></i><a href="https://github.com/NSavage13" target="_blank" rel="noopener">github.com/NSavage13</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="mb-3">Skills</h2>
+    <p class="muted">Tools and tech I use most.</p>
+    <div class="mb-2">
+      <span class="tag"><i class="bi bi-circle-fill"></i> Java</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> Spring Boot</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> REST APIs</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> JUnit</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> Maven</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> MySQL / SQL</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> HTML / CSS / JS</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> Bootstrap</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> C#</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> .NET</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> ASP.NET</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> .NET MAUI</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> Visual Studio</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> VS Code</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> Git / GitHub</span>
+      <span class="tag"><i class="bi bi-circle-fill"></i> Postman</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="mb-3">Projects</h2>
+    <p class="muted">I’ll keep adding more. For now, here are placeholders you can swap with your real repos.</p>
+
+    <div class="row g-4">
+      <!-- Project 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Application Tracker (Java + MySQL)</h5>
+            <p class="card-text text-muted">
+              Desktop app to track job/internship applications with CRUD and search. Uses Java, JDBC, and MySQL.
+            </p>
+            <div class="mt-auto">
+              <!-- TODO: replace # with your repo link -->
+              <a href="#" target="_blank" class="btn btn-primary"><i class="bi bi-github me-2"></i>View Repo</a>
             </div>
-        </section>
-        <!-- Projects-->
-        <section class="projects-section bg-light" id="projects">
-            <div class="container px-4 px-lg-5">
-                <!-- Featured Project Row-->
-                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="..." /></div>
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
-                            <h4>Shoreline</h4>
-                            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project One Row-->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="..." /></div>
-                    <div class="col-lg-6">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Misty</h4>
-                                    <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Two Row-->
-                <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="..." /></div>
-                    <div class="col-lg-6 order-lg-first">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Mountains</h4>
-                                    <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">.NET MAUI App</h5>
+            <p class="card-text text-muted">
+              Cross‑platform app (desktop/mobile) built with .NET MAUI and C#. Focus on simple UI and local storage.
+            </p>
+            <!-- TODO: replace link -->
+            <a href="#" target="_blank" class="btn btn-primary mt-auto"><i class="bi bi-github me-2"></i>View Repo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Spring Boot REST API</h5>
+            <p class="card-text text-muted">
+              REST API with CRUD endpoints, tested via Postman and JUnit. Ready for a simple Bootstrap front‑end.
+            </p>
+            <!-- TODO: replace link -->
+            <a href="#" target="_blank" class="btn btn-primary mt-auto"><i class="bi bi-github me-2"></i>View Repo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional: Projects grid note -->
+    <p class="small muted mt-3">Tip: keep each project in its own GitHub repo; link to them here.</p>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume" class="section">
+  <div class="container">
+    <h2 class="mb-3">Resume</h2>
+    <p class="muted">Quick view below. You can also download the file.</p>
+    <div class="d-flex flex-wrap gap-2 mb-3">
+      <!-- If you upload your docx to the repo root, this link will work -->
+      <a class="btn btn-outline-light" href="Resume2025.docx" download>
+        <i class="bi bi-download me-2"></i>Download (.docx)
+      </a>
+      <!-- If you export a PDF, add it and link it the same way -->
+      <!-- <a class="btn btn-outline-light" href="Resume2025.pdf" download><i class="bi bi-filetype-pdf me-2"></i>Download (.pdf)</a> -->
+    </div>
+
+    <!-- Inline resume summary (edit as needed) -->
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+          <h5 class="mb-2">Background Summary</h5>
+          <p class="mb-0">
+            Programmer with experience in <strong>Java</strong> and <strong>C#</strong>, building 
+            <strong>REST APIs, .NET/.NET MAUI apps</strong>, and front‑end interfaces with 
+            <strong>HTML/CSS/JavaScript</strong>. Strong problem‑solving and teamwork; focused on shipping 
+            features and learning fast.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+          <h5 class="mb-2">Education</h5>
+          <ul class="mb-0 small">
+            <li><strong>B.S. Applied Computer Science</strong> — Point Park University (Expected 2027)</li>
+            <li><strong>A.S. Computer Programming</strong> — Pittsburgh Technical College (GPA 3.82)</li>
+          </ul>
+          <div class="mt-3 small">
+            <span class="tag">Data Structures</span>
+            <span class="tag">UI Design</span>
+            <span class="tag">Software Testing</span>
+            <span class="tag">Agile</span>
+            <span class="tag">Database Development</span>
+            <span class="tag">OOP</span>
+            <span class="tag">2D/3D Game Dev</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+          <h5 class="mb-2">Experience</h5>
+          <p class="small m-0 muted">Monte Cello's Cranberry — Restaurant Manager (2018–Present)</p>
+          <ul class="mb-0 small">
+            <li>Train, schedule, and supervise staff of up to 50.</li>
+            <li>Maintain food safety, labeling, and temperature checks.</li>
+            <li>Create training that improved service and retention.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card p-4 h-100">
+          <h5 class="mb-2">Volunteer</h5>
+          <p class="small m-0 muted">World Class Gym — Trainer (2016–Present)</p>
+          <ul class="mb-0 small">
+            <li>Teach boxing basics; focus on discipline and positive mindset.</li>
+            <li>Support youth programs that keep kids active and engaged.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="mb-3">Contact</h2>
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <p class="muted">
+          Best way to reach me is email. I’m open to junior developer roles, internships, and project work.
+        </p>
+        <div class="card p-4">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-envelope fs-4 me-2 text-primary"></i>
+                <a href="mailto:savagenico@yahoo.com">savagenico@yahoo.com</a>
+              </div>
             </div>
-        </section>
-        <!-- Signup-->
-        <section class="signup-section" id="signup">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Email address input-->
-                            <div class="row input-group-newsletter">
-                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
-                            </div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3 mt-2 text-white">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
-                        </form>
-                    </div>
-                </div>
+            <div class="col-md-6">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-telephone fs-4 me-2 text-primary"></i>
+                <a href="tel:+17246223676">724‑622‑3676</a>
+              </div>
             </div>
-        </section>
-        <!-- Contact-->
-        <section class="contact-section bg-black">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Address</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Phone</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">+1 (555) 902-8832</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="social d-flex justify-content-center">
-                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
-                </div>
+            <div class="col-md-6">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-github fs-4 me-2 text-primary"></i>
+                <a href="https://github.com/NSavage13" target="_blank" rel="noopener">github.com/NSavage13</a>
+              </div>
             </div>
-        </section>
-        <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2023</div></footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+            <!-- Optional LinkedIn -->
+            <!-- <div class="col-md-6">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-linkedin fs-4 me-2 text-primary"></i>
+                <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="card p-4 h-100">
+          <h6 class="text-uppercase text-primary small mb-3">Status</h6>
+          <ul class="small mb-0">
+            <li>Location: Freedom, PA</li>
+            <li>Availability: Part‑time / Internship / Junior roles</li>
+            <li>Turnaround: Usually evenings/weekends</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-4">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <span class="small">© <span id="y"></span> Nico Savage</span>
+    <span class="small">Built with Bootstrap 5</span>
+  </div>
+</footer>
+
+<script>
+  // set year
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
